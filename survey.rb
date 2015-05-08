@@ -94,6 +94,7 @@ data = {
  "entry.25910843"   => FILE_COUNT_MEDIAN,
  "entry.1991677456" => FILE_COUNT_MEAN,
  "entry.1708019648" => FILE_COUNT_STDDEV,
+ "entry.1948357669" => ENGINE_VERSION,
  "entry.1776998325" => Gem::VERSION
 }
 

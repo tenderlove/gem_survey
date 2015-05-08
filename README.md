@@ -7,13 +7,13 @@ Hi, I would like to get some statistics about gem installations so that I can be
 Do this once:
 
 ```
-$ curl https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/d7f9b23be394c8f66339a5be6038683476f2b2a3/fuu.rb | ruby
+$ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | ruby
 ```
 
 Then in each project do this:
 
 ```
-$ curl https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/d7f9b23be394c8f66339a5be6038683476f2b2a3/fuu.rb | bundle exec ruby
+$ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | bundle exec ruby
 ```
 
 # Not so quick start
@@ -31,13 +31,13 @@ For system wide statistics, run the script like this:
 wget:
 
 ```
-$ wget -qO- https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/c86c48c719be325683288dce8efb637b5ec37c78/fuu.rb | ruby 
+$ wget -qO- https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | ruby 
 ```
 
 curl:
 
 ```
-$ curl https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/d7f9b23be394c8f66339a5be6038683476f2b2a3/fuu.rb | ruby
+$ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | ruby
 ```
 
 ### Per project stats
@@ -47,13 +47,13 @@ For per-project statistics, run the script like this:
 wget:
 
 ```
-$ wget -qO- https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/c86c48c719be325683288dce8efb637b5ec37c78/fuu.rb | bundle exec ruby 
+$ wget -qO- https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | bundle exec ruby 
 ```
 
 curl:
 
 ```
-$ curl https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/d7f9b23be394c8f66339a5be6038683476f2b2a3/fuu.rb | bundle exec ruby
+$ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | bundle exec ruby
 ```
 ## What information is collected?
 

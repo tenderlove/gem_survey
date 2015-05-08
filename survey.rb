@@ -82,24 +82,24 @@ FILE_COUNT_STDDEV = Math.sqrt(file_counts.map { |c|
 ENGINE_VERSION = engine_version(ENGINE)
 
 data = {
-  'id'                => ID,
-  'bundler'           => BUNDLER,
-  'number of gems'    => GEM_COUNT,
-  'ruby engine'       => ENGINE,
-  'ruby version'      => RUBY_VERSION,
-  'os'                => HOST_OS,
-  'file count min'    => FILE_COUNT_MIN,
-  'file count max'    => FILE_COUNT_MAX,
-  'file count median' => FILE_COUNT_MEDIAN,
-  'file count mean'   => FILE_COUNT_MEAN,
-  'file count stddev' => FILE_COUNT_STDDEV,
-  'engine version'    => ENGINE_VERSION,
+ "entry.1712539647" => ID,
+ "entry.718926715"  => BUNDLER,
+ "entry.1949110369" => GEM_COUNT,
+ "entry.983120977"  => ENGINE,
+ "entry.252419979"  => RUBY_VERSION,
+ "entry.412327531"  => HOST_OS,
+ "entry.296903173"  => FILE_COUNT_MIN,
+ "entry.1554381816" => FILE_COUNT_MAX,
+ "entry.25910843"   => FILE_COUNT_MEDIAN,
+ "entry.1991677456" => FILE_COUNT_MEAN,
+ "entry.1708019648" => FILE_COUNT_STDDEV
 }
-p data
-__END__
 
-uri = URI.parse("https://docs.google.com/forms/d/1-GZn_LSCiFCIpkKi2LjDaq72ICxdmhBOYu11LwN1Pl8/formResponse")
+if $DEBUG
+  require 'pp'
+  pp data
+end
 
-# Shortcut
-response = Net::HTTP.post_form(uri, {"entry.1933043862" => "42"})
-p response
+uri = URI.parse 'https://docs.google.com/forms/d/1BlBZY8yZlny1Js6UOVnBos2Qf9pROUgoXN42mgkhLbk/formResponse'
+
+Net::HTTP.post_form(uri, data)

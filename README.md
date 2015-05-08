@@ -20,9 +20,11 @@ $ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb 
 
 This script gathers some information about the gems that you have installed as well as your Ruby version, RubyGems version and operating system information and uploads them to a Google form anonymously, but with a mostly unique id.  I've outlined exactly what information is collected and why below.
 
+I would like to collect system wide information, as well as per-project information.
+
 ## Running the script
 
-I would like to collect system wide information, as well as per-project information.
+You can run via curl or wget as below, or just download the file and run it directly.  It only depends on code in stdlib, so you shouldn't need to install anything.
 
 ### System wide statistics
 

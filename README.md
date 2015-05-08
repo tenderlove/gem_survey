@@ -59,7 +59,7 @@ $ curl https://gist.githubusercontent.com/tenderlove/3dc2e3c565ff4d4d2b01/raw/d7
 
 Here is a table of what information is collected and why:
 
-| Name | Description |
+| Name | Description / Reason |
 |------|-------------|
 | ID   | A mostly unique id that consists of a SHA256 of your hostname, ip address, time zone, and home directory. This field is to help understand how many projects each person has, and to help weed out duplicate data.|
 | BUNDLER | A SHA256 of the project directory *if* the project uses bundler. This field is to help differentiate system wide statistics from per project bundler statistics. It also helps to remove duplicate records of pre project stats |

@@ -1,5 +1,6 @@
 require "rubygems"
 require "net/http"
+require "net/https"
 require "uri"
 require "digest/sha2"
 require "socket"
@@ -103,4 +104,10 @@ end
 
 uri = URI.parse 'https://docs.google.com/forms/d/1BlBZY8yZlny1Js6UOVnBos2Qf9pROUgoXN42mgkhLbk/formResponse'
 
-Net::HTTP.post_form(uri, data)
+# 1.8 support :(
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Post.new(uri.request_uri)
+request.set_form_data(data)
+http.request(request)

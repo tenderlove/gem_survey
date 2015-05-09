@@ -16,6 +16,12 @@ Then in each project do this:
 $ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey.rb | bundle exec ruby
 ```
 
+Or run it all at once:
+
+```
+$ curl https://raw.githubusercontent.com/tenderlove/gem_survey/master/survey_all.rb | bundle exec ruby
+```
+
 # Not so quick start
 
 This script gathers some information about the gems that you have installed as well as your Ruby version, RubyGems version and operating system information and uploads them to a Google form anonymously, but with a mostly unique id.  I've outlined exactly what information is collected and why below.

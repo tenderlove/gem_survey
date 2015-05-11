@@ -46,11 +46,17 @@ def engine_version engine
   end
 end
 
+def ipaddress
+  IPSocket.getaddress(Socket.gethostname)
+rescue SocketError
+  'unknown'
+end
+
 sha = Digest::SHA256
 
 # Create a mostly unique anonymous ID
 ID = sha.hexdigest [Socket.gethostname,
- IPSocket.getaddress(Socket.gethostname),
+ ipaddress,
  Time.now.getlocal.zone,
  File.expand_path("~"), # Get the home directory (works on 1.8)
 ].join
